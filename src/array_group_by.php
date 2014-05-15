@@ -1,10 +1,13 @@
 <?php
 
 	/**
-	 * Groups/splits an array by the key given.
+	 * Groups/splits an array by the key given. Can supply additional parameters beyond the first key
+	 * for additional groupins.
 	 *
-	 * @param array $arr
-	 * @param mixed $key
+	 * @param array $arr The array to have grouping performed on.
+	 * @param mixed $key The key to group/split by.
+	 *
+	 * @return array
 	 */
 	function array_group_by ( $arr, $key )
 	{
@@ -23,15 +26,15 @@
 
 		$newArr = array ();
 
+		// Load the new array splitting by the target key
 		foreach ( $arr as $value )
 		{
-
-			// Load the new array splitting by the target key
 			$arrKey = $value [ $key ];
 			$newArr [ $arrKey ][] = $value;
-
 		}  // End foreach
 
+		// Recursively build a nested grouping if more parameters are supplied
+		// Build for each previously grouped values, slicing off the new split parameters for each call
 		if ( func_num_args () > 2 )
 		{
 
