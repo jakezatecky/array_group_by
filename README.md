@@ -33,7 +33,7 @@ Example input:
             "object" => "Space pen"
         )
     );
-    
+
     $grouped = array_group_by ( $records, "state" );
 
 Example output:
@@ -99,3 +99,8 @@ Example output:
 
             )
     )
+
+# To-Do
+
+* Add test cases.
+* Add to Composer.
