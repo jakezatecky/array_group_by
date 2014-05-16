@@ -1,6 +1,6 @@
 # array_group_by
 
-This simple function takes an array and groups its members by a provided key.
+A function that groups/splits an array by the values of a given key or keys.
 
 # Usage
 
