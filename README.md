@@ -34,7 +34,7 @@ Example input:
         )
     );
 
-    $grouped = array_group_by ( $records, "state" );
+    $grouped = array_group_by ( $records, "state", "city" );
 
 Example output:
 
