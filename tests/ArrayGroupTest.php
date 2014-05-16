@@ -1,6 +1,5 @@
 <?php
 
-	require_once "PHPUnit/Autoload.php";
 	require_once "src/array_group_by.php";
 
 	/**
