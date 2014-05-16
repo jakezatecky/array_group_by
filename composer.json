@@ -1,6 +1,6 @@
 {
 	"name": "jzatecky/array_group_by",
-	"description": "Groups/splits an array by the values of a given key or keys.",
+	"description": "A function that groups/splits an array by the values of a given key or keys.",
 	"type": "library",
 	"keywords": [ "array", "group", "split", "array_group_by", "array_key_split" ],
 	"homepage": "https://github.com/jzatecky/array_group_by",
