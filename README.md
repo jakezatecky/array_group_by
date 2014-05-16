@@ -99,8 +99,3 @@ Example output:
 
             )
     )
-
-# To-Do
-
-* Add test cases.
-* Add to Composer.
