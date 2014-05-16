@@ -173,6 +173,17 @@
 
 		}  // End testGroupTwoLevels
 
+		/**
+		 * @expectedException PHPUnit_Framework_Error
+		 * @expectedExceptionMessage array_group_by(): The first argument should be an array
+		 */
+		public function testArrayError ()
+		{
+
+			array_group_by ( null, null );
+
+		}  // End testArrayError
+
 	}  // End ArrayGroupTest
 
 ?>
