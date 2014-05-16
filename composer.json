@@ -1,0 +1,23 @@
+{
+	"name": "jzatecky/array_group_by",
+	"description": "Groups/splits an array by the values of a given key or keys.",
+	"type": "library",
+	"keywords": [ "array", "group", "split", "array_group_by", "array_key_split" ],
+	"homepage": "https://github.com/jzatecky/array_group_by",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Jake Zatecky"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/jzatecky/array_group_by/issues",
+		"source": "https://github.com/jzatecky/array_group_by"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~3.7"
+	},
+	"autoload": {
+		"files": [ "src/array_group_by.php" ]
+	}
+}
