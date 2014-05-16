@@ -14,14 +14,14 @@
 
 		if ( !is_array ( $arr ) )
 		{
-			trigger_error ( "array_key_split(): The first argument should be an array", E_USER_ERROR );
+			trigger_error ( "array_group_by(): The first argument should be an array", E_USER_ERROR );
 		}  // End if
 
 		if ( !is_string ( $key ) &&
 			 !is_int ( $key ) &&
 			 !is_float ( $key ) )
 		{
-			trigger_error ( "array_key_split(): The key should be a string or integer", E_USER_ERROR );
+			trigger_error ( "array_group_by(): The key should be a string or integer", E_USER_ERROR );
 		}  // End if
 
 		$newArr = array ();
