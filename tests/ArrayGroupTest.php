@@ -184,6 +184,17 @@
 
 		}  // End testArrayError
 
+		/**
+		 * @expectedException PHPUnit_Framework_Error
+		 * @expectedExceptionMessage array_group_by(): The key should be a string or integer
+		 */
+		public function testKeyError ()
+		{
+
+			array_group_by ( array (), null );
+
+		}  // End testKeyError
+
 	}  // End ArrayGroupTest
 
 ?>
