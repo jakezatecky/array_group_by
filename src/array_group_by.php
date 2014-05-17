@@ -45,7 +45,7 @@
 			foreach ( $newArr as $key => $value )
 			{
 				$parms = array_merge ( array ( $value ), array_slice ( $args, 2, func_num_args () ) );
-				$newArr [ $key ] = call_user_func_array ( "array_key_split", $parms );
+				$newArr [ $key ] = call_user_func_array ( "array_group_by", $parms );
 			}  // End foreach
 
 		}  // End if
