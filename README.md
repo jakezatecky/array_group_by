@@ -103,3 +103,17 @@ Array
         )
 )
 ```
+
+# Installation
+
+A Composer package is available for this function. Just add the following to `composer.json`.
+
+``` javascript
+{
+    "require": {
+        "jakezatecky/array_group_by": "~0.7"
+    }
+}
+```
+
+Alternatively, you can just include the `src/array_group_by` file.
