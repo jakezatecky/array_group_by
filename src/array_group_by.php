@@ -4,6 +4,8 @@
 	 * Groups/splits an array by the key given. Can supply additional parameters beyond the first key
 	 * for additional groupins.
 	 *
+	 * @author Jake Zatecky
+	 *
 	 * @param array $arr The array to have grouping performed on.
 	 * @param mixed $key The key to group/split by.
 	 *
