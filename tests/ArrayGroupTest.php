@@ -102,6 +102,52 @@
 
 		}  // End testGroupByState
 
+		public function testGroupByStateCity ()
+		{
+
+			$expected = array (
+				"IN" => array (
+					"Indianapolis" => array (
+						array (
+							"state" => "IN",
+							"city" => "Indianapolis",
+							"object" => "School Bus"
+						),
+						array (
+							"state" => "IN",
+							"city" => "Indianapolis",
+							"object" => "Manhole"
+						)
+					),
+					"Plainfield" => array (
+						array (
+							"state" => "IN",
+							"city" => "Plainfield",
+							"object" => "Basketball"
+						)
+					)
+				),
+				"CA" => array (
+					"San Diego" => array (
+						array (
+							"state" => "CA",
+							"city" => "San Diego",
+							"object" => "Light bulb"
+						)
+					),
+					"Mountain View" => array (
+						array (
+							"state" => "CA",
+							"city" => "Mountain View",
+							"object" => "Space pen"
+						)
+					)
+				)
+			);
+			$this->assertEquals ( $expected, array_group_by ( $this->states, "state", "city" ) );
+
+		}  // End testGroupByStateCity
+
 		public function testGroupByInt ()
 		{
 
