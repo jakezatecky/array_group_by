@@ -111,7 +111,7 @@ A Composer package is available for this function. Just add the following to `co
 ``` javascript
 {
     "require": {
-        "jakezatecky/array_group_by": "~0.7"
+        "jakezatecky/array_group_by": "~0.7.1"
     }
 }
 ```
