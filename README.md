@@ -11,7 +11,7 @@ $records = array (
     array (
         "state" => "IN",
         "city" => "Indianapolis",
-        "object" => "School Bus"
+        "object" => "School bus"
     ),
     array (
         "state" => "IN",
@@ -51,7 +51,7 @@ Array
                         (
                             [state] => IN
                             [city] => Indianapolis
-                            [object] => School Bus
+                            [object] => School bus
                         )
 
                     [1] => Array
