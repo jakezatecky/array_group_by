@@ -15,7 +15,7 @@
 				array (
 					"state" => "IN",
 					"city" => "Indianapolis",
-					"object" => "School Bus"
+					"object" => "School bus"
 				),
 				array (
 					"state" => "IN",
@@ -72,7 +72,7 @@
 					array (
 						"state" => "IN",
 						"city" => "Indianapolis",
-						"object" => "School Bus"
+						"object" => "School bus"
 					),
 					array (
 						"state" => "IN",
@@ -111,7 +111,7 @@
 						array (
 							"state" => "IN",
 							"city" => "Indianapolis",
-							"object" => "School Bus"
+							"object" => "School bus"
 						),
 						array (
 							"state" => "IN",
@@ -182,7 +182,7 @@
 						array (
 							"state" => "IN",
 							"city" => "Indianapolis",
-							"object" => "School Bus"
+							"object" => "School bus"
 						),
 						array (
 							"state" => "IN",
@@ -231,7 +231,7 @@
 
 		/**
 		 * @expectedException PHPUnit_Framework_Error
-		 * @expectedExceptionMessage array_group_by(): The key should be a string or integer
+		 * @expectedExceptionMessage array_group_by(): The key should be a string or an integer
 		 */
 		public function testKeyError ()
 		{
