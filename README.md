@@ -112,7 +112,7 @@ A Composer package is available for this function. Just add the following to
 ``` javascript
 {
     "require": {
-        "jakezatecky/array_group_by": "~0.7.1"
+        "jakezatecky/array_group_by": "~0.7.2"
     }
 }
 ```
