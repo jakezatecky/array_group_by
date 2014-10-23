@@ -1,6 +1,7 @@
 # array_group_by
 
-A function that groups/splits an array by the values of a given key or keys.
+`array_group_by` is a function that groups an array by a key or set of keys
+shared between all array members.
 
 # Usage
 
@@ -117,4 +118,4 @@ A Composer package is available for this function. Just add the following to
 }
 ```
 
-Alternatively, you can just include the `src/array_group_by` file.
+Alternatively, you can just include the `src/array_group_by.php` file.

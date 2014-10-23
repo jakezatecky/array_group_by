@@ -2,8 +2,7 @@
 
 /**
  * Groups an array by a given key. Any additional keys beyond the first will be
- * used for grouping the
- * next set of sub-arrays.
+ * used for grouping the next set of sub-arrays.
  *
  * @author Jake Zatecky
  *
