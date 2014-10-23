@@ -7,35 +7,35 @@ A function that groups/splits an array by the values of a given key or keys.
 Example input:
 
 ``` php
-$records = array (
-    array (
+$records = array(
+    array(
         "state" => "IN",
         "city" => "Indianapolis",
         "object" => "School bus"
     ),
-    array (
+    array(
         "state" => "IN",
         "city" => "Indianapolis",
         "object" => "Manhole"
     ),
-    array (
+    array(
         "state" => "IN",
         "city" => "Plainfield",
         "object" => "Basketball"
     ),
-    array (
+    array(
         "state" => "CA",
         "city" => "San Diego",
         "object" => "Light bulb"
     ),
-    array (
+    array(
         "state" => "CA",
         "city" => "Mountain View",
         "object" => "Space pen"
     )
 );
 
-$grouped = array_group_by ( $records, "state", "city" );
+$grouped = array_group_by($records, "state", "city");
 ```
 
 Example output:
@@ -106,7 +106,8 @@ Array
 
 # Installation
 
-A Composer package is available for this function. Just add the following to `composer.json`.
+A Composer package is available for this function. Just add the following to
+`composer.json`.
 
 ``` javascript
 {
