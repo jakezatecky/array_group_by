@@ -8,7 +8,6 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 
 	public function setUp()
 	{
-
 		$this->states = array(
 			array(
 				"state" => "IN",
@@ -42,7 +41,6 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 			array(1, "That's all the truth I know"),
 			array(2, "That I must bow so low")
 		);
-
 	}
 
 	public function testGroupStringFirstLevel()
@@ -53,7 +51,6 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 
 	public function testGroupByState()
 	{
-
 		$expected = array(
 			"IN" => array(
 				array(
@@ -86,12 +83,10 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 			)
 		);
 		$this->assertEquals($expected, array_group_by($this->states, "state"));
-
 	}
 
 	public function testGroupByStateCity()
 	{
-
 		$expected = array(
 			"IN" => array(
 				"Indianapolis" => array(
@@ -137,7 +132,6 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 
 	public function testGroupByInt()
 	{
-
 		$expected = array(
 			1 => array(
 				array(1, "Only a cat of a different coat"),
@@ -148,12 +142,10 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 			)
 		);
 		$this->assertEquals($expected, array_group_by($this->numbers, 0));
-
 	}
 
 	public function testGroupTwoLevels()
 	{
-
 		$expected = array(
 			"IN" => array(
 				"Indianapolis" => array(
@@ -193,7 +185,6 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 				)
 			)
 		);
-
 	}
 
 	/**
