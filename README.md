@@ -1,6 +1,7 @@
 # array_group_by
 
 [![Build Status](https://travis-ci.org/jakezatecky/array_group_by.svg?branch=master)](https://travis-ci.org/jakezatecky/array_group_by)
+[![Packagist](https://img.shields.io/packagist/v/jakezatecky/array_group_by.svg)](https://packagist.org/packages/jakezatecky/array_group_by)
 
 `array_group_by` is a function that groups an array by a key or set of keys
 shared between all array members.
