@@ -14,10 +14,10 @@
 function array_group_by($arr, $key)
 {
 	if (!is_array($arr)) {
-		trigger_error("array_group_by(): The first argument should be an array", E_USER_ERROR);
+		trigger_error('array_group_by(): The first argument should be an array', E_USER_ERROR);
 	}
 	if (!is_string($key) && !is_int($key) && !is_float($key)) {
-		trigger_error("array_group_by(): The key should be a string or an integer", E_USER_ERROR);
+		trigger_error('array_group_by(): The key should be a string or an integer', E_USER_ERROR);
 	}
 
 	// Load the new array, splitting by the target key
@@ -33,7 +33,7 @@ function array_group_by($arr, $key)
 
 		foreach ($grouped as $key => $value) {
 			$parms = array_merge(array($value), array_slice($args, 2, func_num_args()));
-			$grouped[$key] = call_user_func_array("array_group_by", $parms);
+			$grouped[$key] = call_user_func_array('array_group_by', $parms);
 		}
 	}
 
