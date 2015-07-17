@@ -82,7 +82,7 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 					'city'   => 'Mountain View',
 					'object' => 'Space pen',
 				),
-			)
+			),
 		);
 
 		$this->assertEquals($expected, array_group_by($this->states, 'state'));
@@ -127,7 +127,7 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 						'object' => 'Space pen',
 					),
 				),
-			)
+			),
 		);
 
 		$this->assertEquals($expected, array_group_by($this->states, 'state', 'city'));
@@ -142,8 +142,8 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 				array(1, 'That\'s all the truth I know'),
 			),
 			2 => array(
-				array(2, 'That I must bow so low')
-			)
+				array(2, 'That I must bow so low'),
+			),
 		);
 
 		$this->assertEquals($expected, array_group_by($this->numbers, 0));
