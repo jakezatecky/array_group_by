@@ -190,6 +190,8 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 				),
 			),
 		);
+
+		$this->assertEquals($expected, array_group_by($this->states, 'state', 'city'));
 	}
 
 	/**
