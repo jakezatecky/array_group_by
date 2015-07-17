@@ -1,10 +1,11 @@
 <?php
 
-/**
- * Testing various aspects of the array_group_by function.
- */
 class ArrayGroupTest extends PHPUnit_Framework_TestCase
 {
+
+	protected $states;
+
+	protected $numbers;
 
 	public function setUp()
 	{
