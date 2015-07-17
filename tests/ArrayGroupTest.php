@@ -47,6 +47,7 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 	public function testGroupStringFirstLevel()
 	{
 		$expected = array('IN', 'CA');
+
 		$this->assertEquals($expected, array_keys(array_group_by($this->states, 'state')));
 	}
 
@@ -83,6 +84,7 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 				),
 			)
 		);
+
 		$this->assertEquals($expected, array_group_by($this->states, 'state'));
 	}
 
@@ -127,6 +129,7 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 				),
 			)
 		);
+
 		$this->assertEquals($expected, array_group_by($this->states, 'state', 'city'));
 
 	}
@@ -142,6 +145,7 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 				array(2, 'That I must bow so low')
 			)
 		);
+
 		$this->assertEquals($expected, array_group_by($this->numbers, 0));
 	}
 
