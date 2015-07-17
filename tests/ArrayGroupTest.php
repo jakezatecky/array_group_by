@@ -10,36 +10,36 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 	{
 		$this->states = array(
 			array(
-				'state' => 'IN',
-				'city' => 'Indianapolis',
-				'object' => 'School bus'
+				'state'  => 'IN',
+				'city'   => 'Indianapolis',
+				'object' => 'School bus',
 			),
 			array(
-				'state' => 'IN',
-				'city' => 'Indianapolis',
-				'object' => 'Manhole'
+				'state'  => 'IN',
+				'city'   => 'Indianapolis',
+				'object' => 'Manhole',
 			),
 			array(
-				'state' => 'IN',
-				'city' => 'Plainfield',
-				'object' => 'Basketball'
+				'state'  => 'IN',
+				'city'   => 'Plainfield',
+				'object' => 'Basketball',
 			),
 			array(
-				'state' => 'CA',
-				'city' => 'San Diego',
-				'object' => 'Light bulb'
+				'state'  => 'CA',
+				'city'   => 'San Diego',
+				'object' => 'Light bulb',
 			),
 			array(
-				'state' => 'CA',
-				'city' => 'Mountain View',
-				'object' => 'Space pen'
-			)
+				'state'  => 'CA',
+				'city'   => 'Mountain View',
+				'object' => 'Space pen',
+			),
 		);
 
 		$this->numbers = array(
 			array(1, 'Only a cat of a different coat'),
 			array(1, 'That\'s all the truth I know'),
-			array(2, 'That I must bow so low')
+			array(2, 'That I must bow so low'),
 		);
 	}
 
@@ -54,32 +54,32 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 		$expected = array(
 			'IN' => array(
 				array(
-					'state' => 'IN',
-					'city' => 'Indianapolis',
-					'object' => 'School bus'
+					'state'  => 'IN',
+					'city'   => 'Indianapolis',
+					'object' => 'School bus',
 				),
 				array(
-					'state' => 'IN',
-					'city' => 'Indianapolis',
-					'object' => 'Manhole'
+					'state'  => 'IN',
+					'city'   => 'Indianapolis',
+					'object' => 'Manhole',
 				),
 				array(
-					'state' => 'IN',
-					'city' => 'Plainfield',
-					'object' => 'Basketball'
-				)
+					'state'  => 'IN',
+					'city'   => 'Plainfield',
+					'object' => 'Basketball',
+				),
 			),
 			'CA' => array(
 				array(
-					'state' => 'CA',
-					'city' => 'San Diego',
-					'object' => 'Light bulb'
+					'state'  => 'CA',
+					'city'   => 'San Diego',
+					'object' => 'Light bulb',
 				),
 				array(
-					'state' => 'CA',
-					'city' => 'Mountain View',
-					'object' => 'Space pen'
-				)
+					'state'  => 'CA',
+					'city'   => 'Mountain View',
+					'object' => 'Space pen',
+				),
 			)
 		);
 		$this->assertEquals($expected, array_group_by($this->states, 'state'));
@@ -91,39 +91,39 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 			'IN' => array(
 				'Indianapolis' => array(
 					array(
-						'state' => 'IN',
-						'city' => 'Indianapolis',
-						'object' => 'School bus'
+						'state'  => 'IN',
+						'city'   => 'Indianapolis',
+						'object' => 'School bus',
 					),
 					array(
-						'state' => 'IN',
-						'city' => 'Indianapolis',
-						'object' => 'Manhole'
-					)
+						'state'  => 'IN',
+						'city'   => 'Indianapolis',
+						'object' => 'Manhole',
+					),
 				),
-				'Plainfield' => array(
+				'Plainfield'   => array(
 					array(
-						'state' => 'IN',
-						'city' => 'Plainfield',
-						'object' => 'Basketball'
-					)
-				)
+						'state'  => 'IN',
+						'city'   => 'Plainfield',
+						'object' => 'Basketball',
+					),
+				),
 			),
 			'CA' => array(
-				'San Diego' => array(
+				'San Diego'     => array(
 					array(
-						'state' => 'CA',
-						'city' => 'San Diego',
-						'object' => 'Light bulb'
-					)
+						'state'  => 'CA',
+						'city'   => 'San Diego',
+						'object' => 'Light bulb',
+					),
 				),
 				'Mountain View' => array(
 					array(
-						'state' => 'CA',
-						'city' => 'Mountain View',
-						'object' => 'Space pen'
-					)
-				)
+						'state'  => 'CA',
+						'city'   => 'Mountain View',
+						'object' => 'Space pen',
+					),
+				),
 			)
 		);
 		$this->assertEquals($expected, array_group_by($this->states, 'state', 'city'));
@@ -150,40 +150,40 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 			'IN' => array(
 				'Indianapolis' => array(
 					array(
-						'state' => 'IN',
-						'city' => 'Indianapolis',
-						'object' => 'School bus'
+						'state'  => 'IN',
+						'city'   => 'Indianapolis',
+						'object' => 'School bus',
 					),
 					array(
-						'state' => 'IN',
-						'city' => 'Indianapolis',
-						'object' => 'Manhole'
-					)
+						'state'  => 'IN',
+						'city'   => 'Indianapolis',
+						'object' => 'Manhole',
+					),
 				),
-				'Plainfield' => array(
+				'Plainfield'   => array(
 					array(
-						'state' => 'IN',
-						'city' => 'Plainfield',
-						'object' => 'Basketball'
-					)
-				)
+						'state'  => 'IN',
+						'city'   => 'Plainfield',
+						'object' => 'Basketball',
+					),
+				),
 			),
 			'CA' => array(
-				'San Diego' => array(
+				'San Diego'     => array(
 					array(
-						'state' => 'CA',
-						'city' => 'San Diego',
-						'object' => 'Light bulb'
-					)
+						'state'  => 'CA',
+						'city'   => 'San Diego',
+						'object' => 'Light bulb',
+					),
 				),
 				'Mountain View' => array(
 					array(
-						'state' => 'CA',
-						'city' => 'Mountain View',
-						'object' => 'Space pen'
-					)
-				)
-			)
+						'state'  => 'CA',
+						'city'   => 'Mountain View',
+						'object' => 'Space pen',
+					),
+				),
+			),
 		);
 	}
 

@@ -10,30 +10,30 @@ Example input:
 ``` php
 $records = array(
     array(
-        'state' => 'IN',
-        'city' => 'Indianapolis',
-        'object' => 'School bus'
+        'state'  => 'IN',
+        'city'   => 'Indianapolis',
+        'object' => 'School bus',
     ),
     array(
-        'state' => 'IN',
-        'city' => 'Indianapolis',
-        'object' => 'Manhole'
+        'state'  => 'IN',
+        'city'   => 'Indianapolis',
+        'object' => 'Manhole',
     ),
     array(
-        'state' => 'IN',
-        'city' => 'Plainfield',
-        'object' => 'Basketball'
+        'state'  => 'IN',
+        'city'   => 'Plainfield',
+        'object' => 'Basketball',
     ),
     array(
-        'state' => 'CA',
-        'city' => 'San Diego',
-        'object' => 'Light bulb'
+        'state'  => 'CA',
+        'city'   => 'San Diego',
+        'object' => 'Light bulb',
     ),
     array(
-        'state' => 'CA',
-        'city' => 'Mountain View',
-        'object' => 'Space pen'
-    )
+        'state'  => 'CA',
+        'city'   => 'Mountain View',
+        'object' => 'Space pen',
+    ),
 );
 
 $grouped = array_group_by($records, 'state', 'city');
