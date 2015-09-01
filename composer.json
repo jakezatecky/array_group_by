@@ -15,7 +15,7 @@
 		"source": "https://github.com/jakezatecky/array_group_by"
 	},
 	"require": {
-		"php": ">=5.3"
+		"php": ">=5.5"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.8"
