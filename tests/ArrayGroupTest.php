@@ -9,126 +9,126 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 
 	public function setUp()
 	{
-		$this->states = array(
-			array(
+		$this->states = [
+			[
 				'state'  => 'IN',
 				'city'   => 'Indianapolis',
 				'object' => 'School bus',
-			),
-			array(
+			],
+			[
 				'state'  => 'IN',
 				'city'   => 'Indianapolis',
 				'object' => 'Manhole',
-			),
-			array(
+			],
+			[
 				'state'  => 'IN',
 				'city'   => 'Plainfield',
 				'object' => 'Basketball',
-			),
-			array(
+			],
+			[
 				'state'  => 'CA',
 				'city'   => 'San Diego',
 				'object' => 'Light bulb',
-			),
-			array(
+			],
+			[
 				'state'  => 'CA',
 				'city'   => 'Mountain View',
 				'object' => 'Space pen',
-			),
-		);
+			],
+		];
 
-		$this->numbers = array(
-			array(1, 'Only a cat of a different coat'),
-			array(1, 'That\'s all the truth I know'),
-			array(2, 'That I must bow so low'),
-		);
+		$this->numbers = [
+			[1, 'Only a cat of a different coat'],
+			[1, 'That\'s all the truth I know'],
+			[2, 'That I must bow so low'],
+		];
 	}
 
 	public function testGroupStringFirstLevel()
 	{
-		$expected = array('IN', 'CA');
+		$expected = ['IN', 'CA'];
 
 		$this->assertEquals($expected, array_keys(array_group_by($this->states, 'state')));
 	}
 
 	public function testGroupByState()
 	{
-		$expected = array(
-			'IN' => array(
-				array(
+		$expected = [
+			'IN' => [
+				[
 					'state'  => 'IN',
 					'city'   => 'Indianapolis',
 					'object' => 'School bus',
-				),
-				array(
+				],
+				[
 					'state'  => 'IN',
 					'city'   => 'Indianapolis',
 					'object' => 'Manhole',
-				),
-				array(
+				],
+				[
 					'state'  => 'IN',
 					'city'   => 'Plainfield',
 					'object' => 'Basketball',
-				),
-			),
-			'CA' => array(
-				array(
+				],
+			],
+			'CA' => [
+				[
 					'state'  => 'CA',
 					'city'   => 'San Diego',
 					'object' => 'Light bulb',
-				),
-				array(
+				],
+				[
 					'state'  => 'CA',
 					'city'   => 'Mountain View',
 					'object' => 'Space pen',
-				),
-			),
-		);
+				],
+			],
+		];
 
 		$this->assertEquals($expected, array_group_by($this->states, 'state'));
 	}
 
 	public function testGroupByStateCity()
 	{
-		$expected = array(
-			'IN' => array(
-				'Indianapolis' => array(
-					array(
+		$expected = [
+			'IN' => [
+				'Indianapolis' => [
+					[
 						'state'  => 'IN',
 						'city'   => 'Indianapolis',
 						'object' => 'School bus',
-					),
-					array(
+					],
+					[
 						'state'  => 'IN',
 						'city'   => 'Indianapolis',
 						'object' => 'Manhole',
-					),
-				),
-				'Plainfield'   => array(
-					array(
+					],
+				],
+				'Plainfield'   => [
+					[
 						'state'  => 'IN',
 						'city'   => 'Plainfield',
 						'object' => 'Basketball',
-					),
-				),
-			),
-			'CA' => array(
-				'San Diego'     => array(
-					array(
+					],
+				],
+			],
+			'CA' => [
+				'San Diego'     => [
+					[
 						'state'  => 'CA',
 						'city'   => 'San Diego',
 						'object' => 'Light bulb',
-					),
-				),
-				'Mountain View' => array(
-					array(
+					],
+				],
+				'Mountain View' => [
+					[
 						'state'  => 'CA',
 						'city'   => 'Mountain View',
 						'object' => 'Space pen',
-					),
-				),
-			),
-		);
+					],
+				],
+			],
+		];
 
 		$this->assertEquals($expected, array_group_by($this->states, 'state', 'city'));
 
@@ -136,60 +136,60 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 
 	public function testGroupByInt()
 	{
-		$expected = array(
-			1 => array(
-				array(1, 'Only a cat of a different coat'),
-				array(1, 'That\'s all the truth I know'),
-			),
-			2 => array(
-				array(2, 'That I must bow so low'),
-			),
-		);
+		$expected = [
+			1 => [
+				[1, 'Only a cat of a different coat'],
+				[1, 'That\'s all the truth I know'],
+			],
+			2 => [
+				[2, 'That I must bow so low'],
+			],
+		];
 
 		$this->assertEquals($expected, array_group_by($this->numbers, 0));
 	}
 
 	public function testGroupTwoLevels()
 	{
-		$expected = array(
-			'IN' => array(
-				'Indianapolis' => array(
-					array(
+		$expected = [
+			'IN' => [
+				'Indianapolis' => [
+					[
 						'state'  => 'IN',
 						'city'   => 'Indianapolis',
 						'object' => 'School bus',
-					),
-					array(
+					],
+					[
 						'state'  => 'IN',
 						'city'   => 'Indianapolis',
 						'object' => 'Manhole',
-					),
-				),
-				'Plainfield'   => array(
-					array(
+					],
+				],
+				'Plainfield'   => [
+					[
 						'state'  => 'IN',
 						'city'   => 'Plainfield',
 						'object' => 'Basketball',
-					),
-				),
-			),
-			'CA' => array(
-				'San Diego'     => array(
-					array(
+					],
+				],
+			],
+			'CA' => [
+				'San Diego'     => [
+					[
 						'state'  => 'CA',
 						'city'   => 'San Diego',
 						'object' => 'Light bulb',
-					),
-				),
-				'Mountain View' => array(
-					array(
+					],
+				],
+				'Mountain View' => [
+					[
 						'state'  => 'CA',
 						'city'   => 'Mountain View',
 						'object' => 'Space pen',
-					),
-				),
-			),
-		);
+					],
+				],
+			],
+		];
 
 		$this->assertEquals($expected, array_group_by($this->states, 'state', 'city'));
 	}
@@ -209,7 +209,7 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 	 */
 	public function testKeyError()
 	{
-		array_group_by(array(), null);
+		array_group_by([], null);
 	}
 
 }
