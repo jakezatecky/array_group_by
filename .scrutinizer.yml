@@ -29,7 +29,6 @@ checks:
         avoid_usage_of_logical_operators: true
         ensure_lower_case_builtin_functions: true
         foreach_traversable: true
-        function_in_camel_caps: true
         instanceof_class_exists: true
         lowercase_basic_constants: true
         lowercase_php_keywords: true
