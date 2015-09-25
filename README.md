@@ -1,8 +1,8 @@
 # array_group_by
 
-[![Packagist](https://img.shields.io/packagist/v/jakezatecky/array_group_by.svg)](https://packagist.org/packages/jakezatecky/array_group_by)
-[![Build Status](https://travis-ci.org/jakezatecky/array_group_by.svg?branch=master)](https://travis-ci.org/jakezatecky/array_group_by)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/jakezatecky/array_group_by/master/LICENSE.txt)
+[![Packagist](https://img.shields.io/packagist/v/jakezatecky/array_group_by.svg?style=flat-square)](https://packagist.org/packages/jakezatecky/array_group_by)
+[![Build Status](https://img.shields.io/travis/jakezatecky/array_group_by/master.svg?style=flat-square)](https://travis-ci.org/jakezatecky/array_group_by)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/jakezatecky/array_group_by/master/LICENSE.txt)
 
 `array_group_by` is a function that groups an array by a key or set of keys
 shared between all array members.
