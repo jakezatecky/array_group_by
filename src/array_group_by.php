@@ -21,7 +21,7 @@ function array_group_by($arr, $key)
 	}
 
 	// Load the new array, splitting by the target key
-	$grouped = array();
+	$grouped = [];
 	foreach ($arr as $value) {
 		$grouped[$value[$key]][] = $value;
 	}
@@ -32,7 +32,7 @@ function array_group_by($arr, $key)
 		$args = func_get_args();
 
 		foreach ($grouped as $key => $value) {
-			$parms = array_merge(array($value), array_slice($args, 2, func_num_args()));
+			$parms = array_merge([$value], array_slice($args, 2, func_num_args()));
 			$grouped[$key] = call_user_func_array('array_group_by', $parms);
 		}
 	}
