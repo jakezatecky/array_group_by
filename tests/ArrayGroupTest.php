@@ -1,6 +1,8 @@
 <?php
 
-class ArrayGroupTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class ArrayGroupTest extends TestCase
 {
 
 	protected $states;
@@ -194,7 +196,7 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * @expectedException PHPUnit_Framework_Error
+	 * @expectedException \PHPUnit\Framework\Error\Error
 	 * @expectedExceptionMessage array_group_by(): The first argument should be an array
 	 */
 	public function testArrayError()
@@ -203,7 +205,7 @@ class ArrayGroupTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * @expectedException PHPUnit_Framework_Error
+	 * @expectedException \PHPUnit\Framework\Error\Error
 	 * @expectedExceptionMessage array_group_by(): The key should be a string or an integer
 	 */
 	public function testKeyError()
