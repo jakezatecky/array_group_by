@@ -4,7 +4,6 @@ use PHPUnit\Framework\TestCase;
 
 class ArrayGroupTest extends TestCase
 {
-
 	protected $states;
 
 	protected $numbers;
@@ -212,5 +211,4 @@ class ArrayGroupTest extends TestCase
 	{
 		array_group_by([], null);
 	}
-
 }
