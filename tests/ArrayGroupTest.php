@@ -6,6 +6,8 @@ class ArrayGroupTest extends TestCase
 {
     protected $states;
 
+    protected $statesObject;
+
     protected $numbers;
 
     public function setUp()
@@ -32,6 +34,34 @@ class ArrayGroupTest extends TestCase
                 'object' => 'Light bulb',
             ],
             [
+                'state'  => 'CA',
+                'city'   => 'Mountain View',
+                'object' => 'Space pen',
+            ],
+        ];
+
+        $this->statesObject = [
+            (object) [
+                'state'  => 'IN',
+                'city'   => 'Indianapolis',
+                'object' => 'School bus',
+            ],
+            (object) [
+                'state'  => 'IN',
+                'city'   => 'Indianapolis',
+                'object' => 'Manhole',
+            ],
+            (object) [
+                'state'  => 'IN',
+                'city'   => 'Plainfield',
+                'object' => 'Basketball',
+            ],
+            (object) [
+                'state'  => 'CA',
+                'city'   => 'San Diego',
+                'object' => 'Light bulb',
+            ],
+            (object) [
                 'state'  => 'CA',
                 'city'   => 'Mountain View',
                 'object' => 'Space pen',
@@ -190,6 +220,47 @@ class ArrayGroupTest extends TestCase
         $this->assertEquals($expected, array_group_by($this->states, function ($record) {
             return $record['city'];
         }));
+    }
+
+    public function testGroupWithObjects()
+    {
+        $expected = [
+            'Indianapolis' => [
+                (object) [
+                    'state'  => 'IN',
+                    'city'   => 'Indianapolis',
+                    'object' => 'School bus',
+                ],
+                (object) [
+                    'state'  => 'IN',
+                    'city'   => 'Indianapolis',
+                    'object' => 'Manhole',
+                ],
+            ],
+            'Plainfield' =>[
+                (object) [
+                    'state'  => 'IN',
+                    'city'   => 'Plainfield',
+                    'object' => 'Basketball',
+                ],
+            ],
+            'San Diego' => [
+                (object) [
+                    'state'  => 'CA',
+                    'city'   => 'San Diego',
+                    'object' => 'Light bulb',
+                ],
+            ],
+            'Mountain View' => [
+                (object) [
+                    'state'  => 'CA',
+                    'city'   => 'Mountain View',
+                    'object' => 'Space pen',
+                ],
+            ],
+        ];
+
+        $this->assertEquals($expected, array_group_by($this->statesObject, 'city'));
     }
 
     public function testGroupTwoLevels()

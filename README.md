@@ -4,12 +4,11 @@
 [![Build Status](https://img.shields.io/travis/jakezatecky/array_group_by/master.svg?style=flat-square)](https://travis-ci.org/jakezatecky/array_group_by)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/jakezatecky/array_group_by/master/LICENSE.txt)
 
-`array_group_by` is a function that groups an array by a key or set of keys
-shared between all array members.
+> A function to group an array by a key or set of keys shared between all array members.
 
 # Usage
 
-Example input:
+To use `array_group_by`, simply pass an array with any number of keys to group by:
 
 ``` php
 $records = [
@@ -115,14 +114,13 @@ If more complex grouping behavior is desired, you can also pass in a callback fu
 
 ``` php
 $grouped = array_group_by($records, function ($row) {
-    return $row['city'];
+    return $row->city;
 });
 ```
 
 # Installation
 
-A Composer package is available for this function. Just add the following to
-`composer.json`.
+A Composer package is available for this function. Just add the following to `composer.json`.
 
 ``` javascript
 {

@@ -6,8 +6,8 @@
  *
  * @author Jake Zatecky
  *
- * @param array $arr The array to have grouping performed on.
- * @param mixed $key The key to group or split by.
+ * @param array $arr The array to be grouped.
+ * @param mixed $key The key to group by.
  *
  * @return array
  */
@@ -25,7 +25,16 @@ function array_group_by($arr, $key)
     // Load the new array, splitting by the target key
     $grouped = [];
     foreach ($arr as $value) {
-        $groupKey = $isFunction ? $key($value) : $value[$key];
+        $groupKey = null;
+
+        if ($isFunction) {
+            $groupKey = $key($value);
+        } else if (is_object($value)) {
+            $groupKey = $value->{$key};
+        } else {
+            $groupKey = $value[$key];
+        }
+
         $grouped[$groupKey][] = $value;
     }
 
