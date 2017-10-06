@@ -149,6 +149,49 @@ class ArrayGroupTest extends TestCase
         $this->assertEquals($expected, array_group_by($this->numbers, 0));
     }
 
+    public function testGroupByFunction()
+    {
+        $expected = [
+            'Indianapolis' => [
+                [
+                    'state'  => 'IN',
+                    'city'   => 'Indianapolis',
+                    'object' => 'School bus',
+                ],
+                [
+                    'state'  => 'IN',
+                    'city'   => 'Indianapolis',
+                    'object' => 'Manhole',
+                ],
+            ],
+            'Plainfield' =>[
+                [
+                    'state'  => 'IN',
+                    'city'   => 'Plainfield',
+                    'object' => 'Basketball',
+                ],
+            ],
+            'San Diego' => [
+                [
+                    'state'  => 'CA',
+                    'city'   => 'San Diego',
+                    'object' => 'Light bulb',
+                ],
+            ],
+            'Mountain View' => [
+                [
+                    'state'  => 'CA',
+                    'city'   => 'Mountain View',
+                    'object' => 'Space pen',
+                ],
+            ],
+        ];
+
+        $this->assertEquals($expected, array_group_by($this->states, function ($record) {
+            return $record['city'];
+        }));
+    }
+
     public function testGroupTwoLevels()
     {
         $expected = [
@@ -205,7 +248,7 @@ class ArrayGroupTest extends TestCase
 
     /**
      * @expectedException \PHPUnit\Framework\Error\Error
-     * @expectedExceptionMessage array_group_by(): The key should be a string or an integer
+     * @expectedExceptionMessage array_group_by(): The key should be a string, an integer, a float, or a function
      */
     public function testKeyError()
     {

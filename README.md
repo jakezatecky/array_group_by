@@ -109,6 +109,16 @@ Array
 )
 ```
 
+## Using a Callback
+
+If more complex grouping behavior is desired, you can also pass in a callback function to determine the group key:
+
+``` php
+$grouped = array_group_by($records, function ($row) {
+    return $row['city'];
+});
+```
+
 # Installation
 
 A Composer package is available for this function. Just add the following to
