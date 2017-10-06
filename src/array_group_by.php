@@ -6,8 +6,8 @@
  *
  * @author Jake Zatecky
  *
- * @param array $arr The array to be grouped.
- * @param mixed $key The key to group by.
+ * @param array $arr     The array to be grouped.
+ * @param mixed $key,... A set of keys to group by.
  *
  * @return array
  */
