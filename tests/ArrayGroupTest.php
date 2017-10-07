@@ -309,8 +309,8 @@ class ArrayGroupTest extends TestCase
     }
 
     /**
-     * @expectedException \PHPUnit\Framework\Error\Error
-     * @expectedExceptionMessage array_group_by(): The first argument should be an array
+     * @expectedException \TypeError
+     * @expectedExceptionMessage Argument 1 passed to array_group_by() must be of the type array
      */
     public function testArrayError()
     {

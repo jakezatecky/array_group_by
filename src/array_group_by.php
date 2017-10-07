@@ -11,11 +11,8 @@
  *
  * @return array
  */
-function array_group_by($arr, $key)
+function array_group_by(array $arr, $key) : array
 {
-    if (!is_array($arr)) {
-        trigger_error('array_group_by(): The first argument should be an array', E_USER_ERROR);
-    }
     if (!is_string($key) && !is_int($key) && !is_float($key) && !is_callable($key)) {
         trigger_error('array_group_by(): The key should be a string, an integer, a float, or a function', E_USER_ERROR);
     }
