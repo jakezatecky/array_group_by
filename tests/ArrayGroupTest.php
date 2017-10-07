@@ -309,7 +309,7 @@ class ArrayGroupTest extends TestCase
     }
 
     /**
-     * @expectedException \PHPUnit\Framework\Error\Error
+     * @expectedException \PHPUnit_Framework_Error
      * @expectedExceptionMessage array_group_by(): The first argument should be an array
      */
     public function testArrayError()
@@ -318,7 +318,7 @@ class ArrayGroupTest extends TestCase
     }
 
     /**
-     * @expectedException \PHPUnit\Framework\Error\Error
+     * @expectedException \PHPUnit_Framework_Error
      * @expectedExceptionMessage array_group_by(): The key should be a string, an integer, a float, or a function
      */
     public function testKeyError()
