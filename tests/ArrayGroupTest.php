@@ -10,7 +10,7 @@ class ArrayGroupTest extends TestCase
 
     protected $numbers;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->states = [
             [
@@ -308,21 +308,19 @@ class ArrayGroupTest extends TestCase
         $this->assertEquals($expected, array_group_by($this->states, 'state', 'city'));
     }
 
-    /**
-     * @expectedException \TypeError
-     * @expectedExceptionMessage Argument 1 passed to array_group_by() must be of the type array
-     */
     public function testArrayError()
     {
+        $this->expectException(\TypeError::class);
+        $this->expectExceptionMessage('Argument 1 passed to array_group_by() must be of the type array');
+
         array_group_by(null, null);
     }
 
-    /**
-     * @expectedException \PHPUnit\Framework\Error\Error
-     * @expectedExceptionMessage array_group_by(): The key should be a string, an integer, a float, or a function
-     */
     public function testKeyError()
     {
+        $this->expectException(\PHPUnit\Framework\Error\Error::class);
+        $this->expectExceptionMessage('array_group_by(): The key should be a string, an integer, a float, or a function');
+
         array_group_by([], null);
     }
 }
