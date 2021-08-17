@@ -119,51 +119,6 @@ class ArrayGroupTest extends TestCase
         $this->assertEquals($expected, array_group_by($this->states, 'state'));
     }
 
-    public function testGroupByStateCity()
-    {
-        $expected = [
-            'IN' => [
-                'Indianapolis' => [
-                    [
-                        'state'  => 'IN',
-                        'city'   => 'Indianapolis',
-                        'object' => 'School bus',
-                    ],
-                    [
-                        'state'  => 'IN',
-                        'city'   => 'Indianapolis',
-                        'object' => 'Manhole',
-                    ],
-                ],
-                'Plainfield'   => [
-                    [
-                        'state'  => 'IN',
-                        'city'   => 'Plainfield',
-                        'object' => 'Basketball',
-                    ],
-                ],
-            ],
-            'CA' => [
-                'San Diego'     => [
-                    [
-                        'state'  => 'CA',
-                        'city'   => 'San Diego',
-                        'object' => 'Light bulb',
-                    ],
-                ],
-                'Mountain View' => [
-                    [
-                        'state'  => 'CA',
-                        'city'   => 'Mountain View',
-                        'object' => 'Space pen',
-                    ],
-                ],
-            ],
-        ];
-
-        $this->assertEquals($expected, array_group_by($this->states, 'state', 'city'));
-    }
-
     public function testGroupByInt()
     {
         $expected = [
@@ -306,14 +261,6 @@ class ArrayGroupTest extends TestCase
         ];
 
         $this->assertEquals($expected, array_group_by($this->states, 'state', 'city'));
-    }
-
-    public function testArrayError()
-    {
-        $this->expectException(\TypeError::class);
-        $this->expectExceptionMessage('Argument 1 passed to array_group_by() must be of the type array');
-
-        array_group_by(null, null);
     }
 
     public function testKeyError()
