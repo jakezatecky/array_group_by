@@ -13,7 +13,7 @@ jobs:
         name: Use PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@v2
         with:
-          node-version: ${{ matrix.php-version }}
+          php-version: ${{ matrix.php-version }}
       -
         name: Install dependencies
         uses: php-actions/composer@v6
