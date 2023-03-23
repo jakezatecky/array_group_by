@@ -1,7 +1,7 @@
 # array_group_by
 
 [![Packagist](https://img.shields.io/packagist/v/jakezatecky/array_group_by.svg?style=flat-square)](https://packagist.org/packages/jakezatecky/array_group_by)
-[![Build Status](https://img.shields.io/github/workflow/status/jakezatecky/array_group_by/Build?style=flat-square)](https://github.com/jakezatecky/array_group_by/actions/workflows/main.yml)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/jakezatecky/array_group_by/main.yml?branch=master&style=flat-square)](https://github.com/jakezatecky/array_group_by/actions/workflows/main.yml)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/jakezatecky/array_group_by/master/LICENSE.txt)
 
 > A PHP function to group an array by a key or set of keys shared between all array members.
